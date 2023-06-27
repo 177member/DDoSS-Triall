@@ -1,6 +1,6 @@
 <div align=center>
  
-# 🚀 fZdDoS: Release v0.1 - Premium DDoS Panel 🚀
+# 🚀 fZdDoS TRIAL: Release v0.1 - Trial DDoS Panel 🚀
 
 <p>
  <img src="https://img.shields.io/github/stars/hoaan1995/ZxCDDoS?color=%23DF0067&style=for-the-badge"/> &nbsp;
