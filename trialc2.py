@@ -276,7 +276,7 @@ TOOLS   ► MENAMPILKAN TOOLS
         else:
             try:
                 cmmnd = cnc.split()[0]
-                print("Command: [ " + cmmnd + " ] Not Found!")
+                print("Command: [ " + cmmnd + " ] On VVIP only")
             except IndexError:
                 pass
                 
