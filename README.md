@@ -9,8 +9,8 @@
  
 </p>
 
-> Username: botnet<br>
-> Password: botnet<br>
+> Username: password<br>
+> Password: username<br>
 <p align="center">  <a href="https://t.me/realzer0hub"><img width="160" height="50" src="https://i.imgur.com/N7AK7XY.png"></a></p>
  
 ## Language</br>
@@ -69,8 +69,8 @@ How to use:
 - Recommended in shell of google, azure,...
 - Using vps with high speed will be stronger
 
-git clone https://github.com/FzDTeam/FzDDoSS
-cd FzDDoSS/
+git clone https://github.com/177member/DDoSS-Triall
+cd DDoSS-Triall/
 npm i requests
 npm i https-proxy-agent
 npm i crypto-random-string
@@ -101,6 +101,9 @@ R00tS3C (Layer 4 and AMP methods <3)
 forkyyy (LAYER 7 METHODS <3)
 Leeon123 (SPECIAL METHODS <3)
 TheSpeedX (HTTP, SOCKS5, SOCK4 proxies <3)
+
+Feng (Recode)
+Dandier (Recode)
 ```
 
 # TOS:
